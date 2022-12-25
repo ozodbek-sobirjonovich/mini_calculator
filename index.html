@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="">
+        <input class="soni" type="number" placeholder="SONI" required>
+        <input class="nechasoat" type="number" placeholder="NECHA SOAT ISHLAYDI?" required>
+        <input class="kw" type="number" placeholder="KW" required>
+        <input class="bir" type="number" placeholder="1 KUNLIK CHIQIM">
+        <input class="uttiz" type="number" placeholder="30 KUNLIK CHIQIM">
+        <button class="hisoblash">HISOBLASH</button>
+        <button class="clear" type="reset">TOZALASH</button>
+    </form>
+
+    <script>
+        let button = document.querySelector(".hisoblash")
+
+        button.addEventListener("click", () => {
+            let soni = document.querySelector(".soni").value
+            let nechasoat = document.querySelector(".nechasoat").value
+            let kw = document.querySelector(".kw").value
+            let bir = document.querySelector(".bir")
+            let uttiz = document.querySelector(".uttiz")
+
+            bir.value = `${Number(soni) * Number(nechasoat) * Number(kw)}`
+            uttiz.value = `${Number(soni) * Number(nechasoat) * Number(kw) * 30}`
+        })
+    </script>
+
+</body>
+</html>
