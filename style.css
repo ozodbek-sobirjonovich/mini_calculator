@@ -14,7 +14,7 @@ body {
     background-position: center;
 }
 
-form {
+div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,18 +26,18 @@ form {
     transform: scale(1.5);
 }
 
-form > button {
+div > button {
     width: 100%;
     transition: 0.3s;
 }
 
-form > button:hover {
+div > button:hover {
     background-color: black;
     color: white;
     cursor: pointer;
 }
 
-form input, button {
+div input, button {
     margin-bottom: 3px;
     padding: 5px;
     font-size: 20px;
