@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="">
+    <div>
         <input class="soni" type="number" placeholder="SONI" required>
         <input class="nechasoat" type="number" placeholder="NECHA SOAT ISHLAYDI?" required>
         <input class="kw" type="number" placeholder="KW" required>
@@ -16,10 +16,11 @@
         <input class="uttiz" type="number" placeholder="30 KUNLIK CHIQIM">
         <button class="hisoblash">HISOBLASH</button>
         <button class="clear" type="reset">TOZALASH</button>
-    </form>
+    </div>
 
     <script>
         let button = document.querySelector(".hisoblash")
+        let clear = document.querySelector(".clear")
 
         button.addEventListener("click", () => {
             let soni = document.querySelector(".soni").value
@@ -30,6 +31,14 @@
 
             bir.value = `${Number(soni) * Number(nechasoat) * Number(kw)}`
             uttiz.value = `${Number(soni) * Number(nechasoat) * Number(kw) * 30}`
+        })
+
+        clear.addEventListener('click', () => {
+            document.querySelector(".soni").value = ""
+            document.querySelector(".nechasoat").value = ""
+            document.querySelector(".kw").value = ""
+            document.querySelector(".bir").value = ""
+            document.querySelector(".uttiz").value = ""
         })
     </script>
 
